@@ -28,4 +28,6 @@ fzf_unicode.fzf_args = "--height=20%"
 vis.events.subscribe(vis.events.INIT, function()
     vis:map(vis.modes.NORMAL, '<C-i>', ':fzf-unicode<Enter>')
 end)
+```
 
+The mailing list for this repo is [~adigitoleo/vis-fzf-unicode-develop@lists.sr.ht](mailto:~adigitoleo/vis-fzf-unicode-develop@lists.sr.ht). See also <https://git-send-email.io/>.
