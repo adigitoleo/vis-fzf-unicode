@@ -1,7 +1,7 @@
 # fzf-unicode
 
 Search and insert unicode characters in [vis](https://github.com/martanne/vis).
-Requires the [fzf](ihttps://github.com/junegunn/fzf) fuzzy search utility.
+Requires the [fzf](https://github.com/junegunn/fzf) fuzzy search utility.
 
 ## Usage
 
@@ -19,6 +19,7 @@ fzf_unicode.fzf_bin = "/usr/bin/fzf"
 
 -- Change path to latex symbol table (must match format of provided table)
 -- (default: "latex_symbols.txt" in the same directory as the plugin script)
+fzf_unicode.latex_symbols = "path/to/latex_symbols.txt"
 
 -- Add arguments to be passed to fzf (no arguments by default)
 fzf_unicode.fzf_args = "--height=20%"
