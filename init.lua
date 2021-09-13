@@ -17,9 +17,8 @@ assert(io.open(module.latex_symbols))
 
 
 vis:command_register("fzf-unicode", function(argv, force, win, selection, range)
-    local fzf_out = io.popen(
-         module.fzf_bin .. " " .. module.fzf_args .. " < " .. module.latex_symbols
-    )
+    local command = module.fzf_bin .. " " .. module.fzf_args .. " < " .. module.latex_symbols
+    local fzf_out = io.popen(command)
     local output = {}
     for line in fzf_out:lines() do
         table.insert(output, line)
