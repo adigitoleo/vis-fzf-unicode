@@ -2498,3 +2498,4 @@
 \mlcp    ⫛
 \leftsquigarrow    ⇜
 \bsansy    𝘆
+\shrug    ¯\_(ツ)_/¯
