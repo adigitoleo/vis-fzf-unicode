@@ -5,7 +5,15 @@ Requires the [fzf](https://github.com/junegunn/fzf) fuzzy search utility.
 
 ## Usage
 
-Use `:fzf-unicode` and search for the symbol by its LaTeX name. Hit `<Enter>` to insert the symbol only.
+Bind the `.action` member of the module to a key or key sequence in insert or replace mode:
+
+```
+local fzf_unicode = require('plugins/<path-to-fzf-unicode-plugin>')
+-- replace <C-f> with your keybinding of choice
+vis:map(vis.modes.INSERT, '<C-f>', fzf_unicode.action)
+```
+
+Search for the symbol by its LaTeX name. Hit `<Enter>` to insert the symbol only.
 
 ## Configuration
 
@@ -23,11 +31,6 @@ fzf_unicode.latex_symbols = "path/to/latex_symbols.txt"
 
 -- Add arguments to be passed to fzf (no arguments by default)
 fzf_unicode.fzf_args = "--height=20%"
-
--- Set a key mapping for quick access
-vis.events.subscribe(vis.events.INIT, function()
-    vis:map(vis.modes.NORMAL, '<C-i>', ':fzf-unicode<Enter>')
-end)
 ```
 
 The mailing list for this repo is [~adigitoleo/vis-fzf-unicode-develop@lists.sr.ht](mailto:~adigitoleo/vis-fzf-unicode-develop@lists.sr.ht). See also <https://git-send-email.io/>.
