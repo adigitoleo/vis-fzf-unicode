@@ -26,11 +26,13 @@ module.action = vis:action_register("fzf-unicode", function()
     local success, msg, status = fzf_out:close()
 
     if status == 0 then
-        vis:feedkeys(
-            string.format(
-                "<vis-append-char-next>%s", string.match(output[1], "([^%s]+)$")
-            )
-        )
+        if vis.mode == vis.modes.INSERT then
+            vis:insert(string.format("%s", string.match(output[1], "([^%s]+)$")))
+        elseif vis.mode == vis.modes.REPLACE then
+            vis:replace(string.format("%s", string.match(output[1], "([^%s]+)$")))
+        else
+            vis:info("fzf-unicode: Error. Must be called from insert or replace mode.")
+        end
     elseif status == 2 then
         vis:info(
             string.format(
