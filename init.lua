@@ -54,7 +54,7 @@ vis:command_register("fzf-unicode", function(argv, force, win, selection, range)
         )
     end
 
-    vis:feedkeys("<vis-redraw>")
+    vis:redraw()
 
     return true;
 end, "Search and insert unicode character")
