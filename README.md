@@ -33,4 +33,4 @@ fzf_unicode.latex_symbols = "path/to/latex_symbols.txt"
 fzf_unicode.fzf_args = "--height=20%"
 ```
 
-The mailing list for this repo is [~adigitoleo/vis-fzf-unicode-develop@lists.sr.ht](mailto:~adigitoleo/vis-fzf-unicode-develop@lists.sr.ht). See also <https://git-send-email.io/>.
+Please send patches/comments to my [public inbox](https://lists.sr.ht/~adigitoleo/public-inbox).
