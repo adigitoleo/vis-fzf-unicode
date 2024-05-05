@@ -2,6 +2,7 @@
 
 Search and insert unicode characters in [vis](https://github.com/martanne/vis).
 Requires the [fzf](https://github.com/junegunn/fzf) fuzzy search utility.
+To regenerate the symbol list use `julia make.jl`, which requires [Julia](https://julialang.org/).
 
 ## Usage
 
